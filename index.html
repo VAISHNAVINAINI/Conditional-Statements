@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional-Statements</title>
+</head>
+
+<body>
+    <h1>Conditional Statements in JS</h1>
+    <h3>if else & else if</h3>
+
+    <script>
+        let units = prompt("enter units");
+        let totalBill;
+        if (units <= 100) {
+            totalBill = units * 1;
+        }
+        else if (units > 100 && units <= 300) {
+            totalBill = (100 * 1) + ((units - 100) * 1.5);
+        }
+        else {
+            totalBill = (100 * 1) + (200 * 1.5) + ((units - 300) * 2);
+        }
+        console.log(`total electricity bill for ${units} units is ${totalBill}`);
+
+        // -----------------------------------------------------------------------------------
+
+        income = prompt("enter your income:");
+        if (income <= 250000) {
+            console.log("No tax on your income")
+        }
+        else if (income > 250000 && income <= 500000) {
+            console.log(`5 % of ${income}`)
+        }
+        else if (income > 500000 && income <= 1000000) {
+            console.log(`12500 + 30 % ${income}`)
+        }
+        else {
+            console.log(`112500 + 30 % ${income}`)
+        }
+
+        // ----------------------------------------------------------------------------------
+
+        let weight = prompt("enter weight");
+        let destination = prompt("enter destination");
+        let cost;
+
+        if (weight <= 1) {
+            if (destination == "Local") {
+                cost = 5;
+            }
+            else if (destination == "National") {
+                cost = 8;
+            }
+            else if (destination == "International") {
+                cost = 15;
+            }
+            else {
+                cost = "Invalid destination";
+            }
+        }
+        else if (weight > 1 && weight <= 5) {
+            if (destination == "Local") {
+                cost = 10;
+            }
+            else if (destination == "National") {
+                cost = 15;
+            }
+            else if (destination == "International") {
+                cost = 30;
+            }
+            else {
+                cost = "Invalid destination";
+            }
+        }
+        else if (weight > 5 && weight <= 10) {
+            if (destination == "Local") {
+                cost = 20;
+            }
+            else if (destination == "National") {
+                cost = 25;
+            }
+            else if (destination == "International") {
+                cost = 50;
+            }
+            else {
+                cost = "Invalid destination";
+            }
+        }
+        else {
+            if (destination == "Local") {
+                cost = 30;
+            }
+            else if (destination == "National") {
+                cost = 35;
+            }
+            else if (destination == "International") {
+                cost = 70;
+            }
+        }
+        console.log("The total shipping cost: $" + cost);
+
+    </script>
+</body>
+</html>
