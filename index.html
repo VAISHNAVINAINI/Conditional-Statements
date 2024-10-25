@@ -27,18 +27,18 @@
 
         // -----------------------------------------------------------------------------------
 
-        income = prompt("enter your income:");
+        income = prompt("Enter your income");
         if (income <= 250000) {
             console.log("No tax on your income")
         }
         else if (income > 250000 && income <= 500000) {
-            console.log(`5 % of ${income}`)
+            console.log((income-250000)*0.05)
         }
         else if (income > 500000 && income <= 1000000) {
-            console.log(`12500 + 30 % ${income}`)
+            console.log(12500+((income-500000))*0.2)
         }
         else {
-            console.log(`112500 + 30 % ${income}`)
+            console.log(112500+((income-1000000)*0.3))
         }
 
         // ----------------------------------------------------------------------------------
